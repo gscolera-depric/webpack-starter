@@ -19,8 +19,8 @@ let devWebpackConfig = merge(baseWebpackConfig, {
     },  
     devServer: {
         contentBase: baseWebpackConfig.externals.route.dst,
-        overlay: true, open: true, hot: true
-    },
+        overlay: true, port: 8081, open: true
+	},
     plugins: [
         new webpack.SourceMapDevToolPlugin({
             filename: '[file].map'

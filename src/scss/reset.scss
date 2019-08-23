@@ -1,0 +1,18 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a { text-decoration: none; }
+
+:focus, :active, :hover { outline: none; }
+
+img, audio, video { max-width: 100%; height: auto; }
+
+textarea {
+  resize: none; /*remove the resize handle on the bottom right*/
+  overflow: auto;
+  vertical-align: top;
+  box-shadow: none;
+}

@@ -8,10 +8,13 @@ let route = {
 }
 
 let conf = {
-    entry: route.src,
+    entry: {
+		app: route.src
+	},
     output: {
         filename: 'js/main.js',
         path: route.dst,
+		publicPath: '/'
     },
     module: {
         rules: [
@@ -31,8 +34,9 @@ let conf = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+			template: `${route.src}/index.html`,
             filename: './index.html',
-            template: './src/index.html'
+			hash: false
         }),
         new CopyWebpackPlugin([
            { from: `${route.src}/assets`, to: `${route.dst}/assets` }
